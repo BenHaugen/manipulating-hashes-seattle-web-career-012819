@@ -16,6 +16,7 @@ def first_challenge
   }
 
   #contacts["Freddy Mercury"][:favorite_icecream_flavors].delete("strawberry")
+<<<<<<< HEAD
   
 contacts.each do |person, data|
   
@@ -30,6 +31,17 @@ contacts.each do |person, data|
           contacts[person][attribute].delete("strawberry")
           
         
+=======
+contacts.each do |person, data|
+  if person == "Freddie Mercury"
+    data.each do |attribute, value|
+      binding.pry
+      if attribute == :favorite_icecream_flavors
+        attribute.each do |flavor|
+          contacts.delete_if do flavor == "strawberry"
+          end
+        end
+>>>>>>> d73e6c455557098d2b25551af2de3f21dcaafd53
       end 
     end
   end
